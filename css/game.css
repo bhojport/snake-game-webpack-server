@@ -1,0 +1,48 @@
+html,
+body {
+	height: 100%;
+}
+body {
+	margin: 0;
+}
+#wall {
+	position: relative;
+	width: 500px;
+	height: 500px;
+	background-color: #000;
+	box-sizing: border-box;
+	/*top: 50%;*/
+	/*left: 50%;*/
+	/*margin-top: -250px;*/
+	/*margin-left: -250px;*/
+}
+#snake,
+#message-block {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	/*right: 0;
+	bottom: 0;
+	left: 0;*/
+	width: 20px;
+	height: 20px;
+	/*margin: auto;*/
+	background-color: #fff;
+}
+#message-block {
+	width: 80%;
+	padding: 20px;
+	font-size: 150%;
+	text-align: center;
+}
+.hide {
+	display: none;
+}
+#food {
+	width: 20px;
+	height: 20px;
+	background-color: #f00;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
