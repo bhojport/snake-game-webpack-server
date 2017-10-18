@@ -1,19 +1,26 @@
 var path = require("path");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var FaviconWebpackPlugin = require("favicons-webpack-plugin");
 
 var extractPlugin = new ExtractTextPlugin({
     filename: "game.css"
 });
+
 
 module.exports = {
     entry: "./js/game.js",
     output: {
         path: path.resolve(__dirname,"dist"),
         filename: "bundle.js",
-        publicPath: "/dist"
+        publicPath: "/dist",
     },
     module: {
         rules: [
+            {
+                test: /\.ico$/,
+                loader: "url-loader",
+                query: { mimetype: "image/x-icon" }
+            },
             {
                 test: /\.css$/,
                 // loader: "css-loader"

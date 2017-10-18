@@ -1,4 +1,5 @@
 /* webpack */
+import "../favicon.ico";
 import "../css/game.css";
 
 
