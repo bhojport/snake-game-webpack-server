@@ -1,6 +1,5 @@
 var path = require("path");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-// var HtmlWebpackPlugin = require("html-webpack-plugin");
 var webpack = require("webpack");
 
 
@@ -25,7 +24,6 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                // loader: "css-loader"
                 use: [
                     "style-loader", // Order is important
                     "css-loader"
@@ -45,21 +43,11 @@ module.exports = {
                         }
                     }
                 ]
-            },
-            /* {
-                test: /\.scss$/,
-                use: extractPlugin.extract({
-                    use: ["css-loader", "sass-loader"]
-                })
-            } */
+            }
         ]
     },
     plugins: [
-        // new webpack.optimize.UglifyJsPlugin({
-
-        // })
         new webpack.optimize.UglifyJsPlugin(),
-        // new HtmlWebpackPlugin({template: "./index.html"}), // For distributing html file, "on dist folder for eg."
         extractPlugin
     ]
 }
