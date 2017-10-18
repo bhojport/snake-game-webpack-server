@@ -1,0 +1,37 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack js/game.js dist/bundle.js",
+    "build:prod": "webpack js/game.js dist/bundle.js -p",
+    "build:watch": "webpack-dev-server --entry ./js/game.js --output-filename ./dist/bundle.js",
+    "buildout": "webpack-dev-server",
+    "buildout:prod": "webpack-dev-server -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhojendra-dc/snake-game.git"
+  },
+  "author": "Bhojendra Rauniyar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhojendra-dc/snake-game/issues"
+  },
+  "homepage": "https://github.com/bhojendra-dc/snake-game#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.1",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.7.1",
+    "webpack-dev-server": "^2.9.2"
+  }
+}

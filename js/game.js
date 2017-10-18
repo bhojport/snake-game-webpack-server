@@ -1,3 +1,7 @@
+/* webpack */
+import "../css/game.css";
+
+
 /*jshint esversion: 6 */
 /* jshint expr: true */
 (function(){
