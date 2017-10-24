@@ -95,9 +95,5 @@ typings/
 # dotenv environment variables file
 .env
 
-
-# Build folders
-dist/
-
 # Editor configuration
 .vscode/
