@@ -1,7 +1,6 @@
 /* webpack */
-import "../favicon.ico";
-import "../css/game.css";
-
+import "./favicon.ico";
+import "./app/assets/css/app.css";
 
 /*jshint esversion: 6 */
 /* jshint expr: true */

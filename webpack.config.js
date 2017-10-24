@@ -1,15 +1,20 @@
 var path = require("path");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+// var CopyWebpackPlugin = require("copy-webpack-plugin");
 var webpack = require("webpack");
 
 
+
 var extractPlugin = new ExtractTextPlugin({
-    filename: "game.css"
+    filename: "app.css"
 });
 
+/* var copyPlugin = new CopyWebpackPlugin([{
+    from: "./*.html"
+}]) */
 
 module.exports = {
-    entry: "./js/game.js",
+    entry: "./app.js",
     output: {
         path: path.resolve(__dirname,"dist"),
         filename: "bundle.js",
@@ -43,11 +48,16 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                test: /\.html$/,
+                loader: 'html-minify-loader'
             }
         ]
     },
     plugins: [
         new webpack.optimize.UglifyJsPlugin(),
         extractPlugin
+        // copyPlugin
     ]
 }
