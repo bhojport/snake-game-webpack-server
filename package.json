@@ -13,7 +13,7 @@
     "url": "git+https://github.com/bhojendra-dc/snake-game.git"
   },
   "author": "Bhojendra Rauniyar",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/bhojendra-dc/snake-game/issues"
   },
